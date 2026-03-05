@@ -18,7 +18,7 @@
 
 ## Live Site:
 
-- [https://](https://mission-restart-assignment-2.netlify.app/)
+- https://mission-restart-assignment-2.netlify.app/
 
 ## About
 
