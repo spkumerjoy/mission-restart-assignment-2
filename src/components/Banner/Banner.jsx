@@ -2,7 +2,7 @@ import React from "react";
 import leftPattern from "../../assets/vector1.png";
 import rightPattern from "../../assets/vector2.png";
 
-const Banner = () => {
+const Banner = ({ statusTask, resolvedTask }) => {
     return (
         <section className="flex flex-col md:flex-row gap-6">
             {/* In-Progress Card */}
@@ -24,7 +24,7 @@ const Banner = () => {
                         In-Progress
                     </p>
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold mt-2 sm:mt-3">
-                        0
+                        {statusTask.length}
                     </h1>
                 </div>
                 {/* Right Pattern */}
@@ -52,7 +52,7 @@ const Banner = () => {
                 <div className="relative z-10 text-center">
                     <p className="text-base sm:text-lg font-medium">Resolved</p>
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold mt-2 sm:mt-3">
-                        0
+                        {resolvedTask.length}
                     </h1>
                 </div>
                 {/* Right Pattern */}
