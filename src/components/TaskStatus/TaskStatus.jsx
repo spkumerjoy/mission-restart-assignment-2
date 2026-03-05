@@ -42,7 +42,7 @@ const TaskStatus = ({
                 ))
             ) : (
                 <div className="text-center p-10 border-2 border-dashed border-base-300 rounded-xl text-gray-500">
-                    <p>Select a ticket to add to Task Status</p>
+                    <p>Select a ticket to add to Task Status.</p>
                 </div>
             )}
         </div>
