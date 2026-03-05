@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { Suspense, use, useState } from "react";
 import "./App.css";
 import spinner from "../src/assets/spinner.svg";
 import Banner from "./components/Banner/Banner";
@@ -15,8 +15,15 @@ const fetchTickets = async () => {
 };
 const ticketPromise = fetchTickets();
 function App() {
+    const allTickets = use(ticketPromise);
+
     const [statusTask, setStatusTask] = useState([]);
     const [resolvedTask, setResolvedTask] = useState([]);
+
+    const activeTickets = allTickets.filter(
+        (ticket) => !resolvedTask.find((rt) => rt.id === ticket.id),
+    );
+
     return (
         <>
             {/* Navbar-Section */}
@@ -43,7 +50,7 @@ function App() {
                         }
                     >
                         <TicketList
-                            ticketPromise={ticketPromise}
+                            ticketData={activeTickets}
                             statusTask={statusTask}
                             setStatusTask={setStatusTask}
                         ></TicketList>

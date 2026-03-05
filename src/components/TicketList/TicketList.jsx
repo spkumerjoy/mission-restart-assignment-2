@@ -1,10 +1,8 @@
-import { use } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar } from "@fortawesome/free-regular-svg-icons";
 import { toast } from "react-toastify";
 
-const TicketList = ({ ticketPromise, statusTask, setStatusTask }) => {
-    const ticketData = use(ticketPromise);
+const TicketList = ({ ticketData, statusTask, setStatusTask }) => {
     const handleSelected = (ticketData) => {
         const isAlreadyAdded = statusTask.find((t) => t.id === ticketData.id);
 
