@@ -4,7 +4,7 @@ import rightPattern from "../../assets/vector2.png";
 
 const Banner = () => {
     return (
-        <div className="flex flex-col md:flex-row gap-6">
+        <section className="flex flex-col md:flex-row gap-6">
             {/* In-Progress Card */}
             <div
                 className="relative w-full h-44 sm:h-48 md:h-52 lg:h-56 rounded-lg overflow-hidden flex items-center justify-center text-white"
@@ -62,7 +62,7 @@ const Banner = () => {
                     className="absolute right-0 top-0 h-full w-auto pointer-events-none"
                 />
             </div>
-        </div>
+        </section>
     );
 };
 
